@@ -9,19 +9,17 @@ Welcome to my projects repository! This contains all my portfolio websites and p
 - Modern personal portfolio with HTML, JavaScript, Next js, Tailwind 
 
 
-
-
 ## 📦 Getting Started
 This is a Next.js project bootstrapped with create-next-app.
 
 First, run the development server:
 
 npm run dev
-# or
+or
 yarn dev
-# or
+or
 pnpm dev
-# or
+or
 bun dev
 Open http://localhost:3000 with your browser to see the result.
 
