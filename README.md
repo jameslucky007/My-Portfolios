@@ -5,7 +5,7 @@ Welcome to my projects repository! This contains all my portfolio websites and p
 ## 🎨 Portfolios
 
 ### [Portfolio V1](./portfolio-v1)
-- **Live Demo**: [lucky-a.vercel.app](https://lucky-a.vercel.app/)
+- **Live Demo**: [lucky-a.vercel.app](https://luckya.vercel.app/)
 - Modern personal portfolio with HTML, JavaScript, Next js, Tailwind 
 
 
