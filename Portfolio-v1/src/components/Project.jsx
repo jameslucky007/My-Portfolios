@@ -49,7 +49,7 @@ const Project = () => {
                 className="w-[120px] h-[80px] object-cover rounded-md mb-4 md:mb-0 md:mr-8 border-2 border-[#232e41]"
               />
               <div className="flex-1">
-                <div className="text-xl font-semibold text-[#78fff0] mb-1">
+                <div className="text-xl font-semibold text-blue-400 mb-1">
                   {proj.title}
                 </div>
                 <div className="text-[#d0d7de] mb-3">{proj.description}</div>
@@ -57,7 +57,7 @@ const Project = () => {
                   {proj.tags.map(tag => (
                     <span
                       key={tag}
-                      className="bg-[#151a23] text-[#78fff0] px-2 py-1 rounded text-xs font-mono"
+                      className="bg-[#151a23] text-blue-400 px-2 py-1 rounded text-xs font-mono"
                     >
                       {tag}
                     </span>
