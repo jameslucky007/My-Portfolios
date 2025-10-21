@@ -1,39 +1,31 @@
 import React from 'react';
+import { FiArrowUpRight } from "react-icons/fi";
 
 const projects = [
   {
-    image: '/spotify-app.png', // replace with your image path
-    title: 'Build a Spotify Connected App',
+    image: '/mindscript.png', 
+    title: 'MindScript',
     description:
-      'Video course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more.',
-    tags: ['Node', 'Express', 'React', 'Spotify API'],
-    link: '#',
+      'A full-stack AI-powered text generation platform  Features real-time AI responses, user management, and conversation history storage.',
+    tags: ['Node', 'Express', 'Next JS', 'GPT-OSS 20b', 'Tailwind', 'Mongo DB', 'firebase'],
+    link: 'https://mindscriptai.vercel.app/',
   },
   {
-    image: '/spotify-profile.png',
-    title: 'Spotify Profile',
+    image: '/email-spam.png',
+    title: 'Email-Spam-Classification',
     description:
-      'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.',
-    tags: ['React', 'Express', 'Spotify API', 'Heroku'],
-    stat: '★ 696',
-    link: '#',
+      'A web app that lets users paste any email text to instantly detect whether it’s spam or not spam using a trained ML model. it provide real-time classification.',
+    tags: ['Next JS', 'Tailwind', 'Node', 'Python', 'Flask'],
+    link: 'https://email-spam-frontend.vercel.app/',
   },
-  {
-    image: '/halcyon-theme.png',
-    title: 'Halcyon Theme',
-    description:
-      'Minimal dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.',
-    tags: [],
-    stat: '↓ 100k+ Installs',
-    link: '#',
-  },
+
 ];
 
 const Project = () => {
   return (
-    <section className="min-h-screen py-12 px-4" id='projects'>
+    <section className=" py-12 px-4" id='projects'>
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#d0d7de] mb-8 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-blue-300 mb-10">
           Projects
         </h2>
         <div className="space-y-10">
@@ -44,12 +36,14 @@ const Project = () => {
               className="flex flex-col md:flex-row items-start rounded-lg shadow-xl bg-[#222b3a] hover:bg-[#263141] transition-all duration-300 p-6"
             >
               <img
-                src={proj.image}
-                alt={proj.title}
-                className="w-[120px] h-[80px] object-cover rounded-md mb-4 md:mb-0 md:mr-8 border-2 border-[#232e41]"
-              />
+  src={proj.image}
+  alt={proj.title}
+  className="w-[230px] h-[120px] object-cover rounded-md mb-4 md:mb-0 md:mr-8 border-2 border-[#232e41] "
+  style={{ objectPosition: "center", aspectRatio: "16/9" }}
+  onError={(e) => (e.target.style.display = "none")}
+/>
               <div className="flex-1">
-                <div className="text-xl font-semibold text-blue-400 mb-1">
+                <div className="text-xl font-semibold text-blue-300 mb-1">
                   {proj.title}
                 </div>
                 <div className="text-[#d0d7de] mb-3">{proj.description}</div>
@@ -57,7 +51,7 @@ const Project = () => {
                   {proj.tags.map(tag => (
                     <span
                       key={tag}
-                      className="bg-[#151a23] text-blue-400 px-2 py-1 rounded text-xs font-mono"
+                      className="bg-[#151a23] text-blue-300 px-2 py-1 rounded text-xs font-mono"
                     >
                       {tag}
                     </span>
@@ -71,7 +65,30 @@ const Project = () => {
           ))}
         </div>
       </div>
+
+      {/* Footer Section */}
+      
+      <div className="mt-10">
+      <a
+        href="mailto:luckya.developer@gmail.com"
+        className="group flex items-center justify-between bg-[#222b3a] hover:bg-[#263141] transition-all duration-300 p-8 rounded-lg cursor-pointer"
+      >
+        <div>
+          <h2 className="text-lg sm:text-xl font-semibold text-slate-100">
+            Connect Me
+          </h2>
+          <p className="text-slate-400 text-sm sm:text-base mt-1">
+            luckya.developer@gmail.com
+          </p>
+        </div>
+
+        <FiArrowUpRight
+          className="text-blue-400 text-2xl transform transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+        />
+      </a>
+    </div>
     </section>
+
   );
 };
 
