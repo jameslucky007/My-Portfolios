@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import About from "./About";
 import Experience from "./Experience";
 import Skill from "./Skill";

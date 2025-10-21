@@ -26,7 +26,8 @@ const About = () => {
         <p className="text-base sm:text-lg leading-relaxed tracking-wide">
           I'm a developer passionate about crafting accessible, pixel-perfect
           user interfaces that blend thoughtful design with robust engineering.
-          I'm a <strong>B.Tech AI & Data Science</strong> student in my third and a passionate freelance <strong>MERN Stack Developer</strong>{" "}
+          I'm a <strong>B.Tech AI & Data Science</strong> student in my third
+          and a passionate freelance <strong>MERN Stack Developer</strong>{" "}
           dedicated to building exceptional digital experiences. I work with
           clients on UI/UX design, web, and app development to deliver clean,
           scalable, and high-performance solutions.

@@ -2,21 +2,20 @@
 import { useState, useEffect } from "react";
 import Hero from "../components/Hero";
 import Sidebar from "../components/Sidebar";
+import { IoIosInfinite } from "react-icons/io";
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [activeSection, setActiveSection] = useState("about");
-  // 1. New state for tracking loading status
+
   const [isLoading, setIsLoading] = useState(true);
 
-  // 2. useEffect for simulating loading
   useEffect(() => {
-    // Set a timer to switch off loading screen after a few seconds
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500); // Loads for 1.5 seconds
+    }, 1500);
 
-    return () => clearTimeout(timer); // Cleanup the timer
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -52,19 +51,19 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // 3. Conditional return: Show loading screen if isLoading is true
   if (isLoading) {
     return (
       <div className="fixed inset-0 bg-gray-900 z-[9999] flex items-center justify-center">
         <div className="text-8xl text-blue-400">
-          <span className="loading-infinity-symbol">♾️</span>
+          <span className="loading-infinity-symbol">
+            <IoIosInfinite />
+          </span>
         </div>
         <p className="sr-only">Loading...</p>
       </div>
     );
   }
 
-  // 4. Main content return: Only shown after loading is complete
   return (
     <div className="flex flex-col lg:flex-row min-h-screen bg-gray-900 relative overflow-hidden">
       {/* Background glow effect */}

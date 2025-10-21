@@ -11,6 +11,7 @@ import {
   FaTelegramPlane,
 } from "react-icons/fa";
 import { TbBrandLeetcode, TbBrandLinktree } from "react-icons/tb";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -71,7 +72,7 @@ const Sidebar = () => {
       <div className="lg:sticky lg:top-10 w-full flex flex-col items-center lg:items-start">
         <Link href={"/"}>
           <Image
-            className="rounded-full w-32 h-32 lg:w-40 lg:h-40 object-cover border-2 border-blue-300 mb-5"
+            className="rounded-full w-32 h-32 lg:w-40 lg:h-40 object-cover border-2 border-blue-300 mb-5 "
             src="/photo.webp"
             alt="Profile"
             width={150}
@@ -82,7 +83,6 @@ const Sidebar = () => {
         <a href="/">
           <h1 className="text-3xl lg:text-5xl font-extrabold flex items-center">
             Lakki Ali
-            <span className="infinity-logo ml-2">♾️</span>
           </h1>
         </a>
 
@@ -129,7 +129,7 @@ const Sidebar = () => {
             <FaGithub />
           </a>
           <a
-            href="https://leetcode.com/u/lakki0072022/"
+            href="https://leetcode.com/u/LuckyBucky007/"
             className="text-gray-300 hover:text-blue-300 transition-colors duration-200 text-2xl"
             target="_blank"
             rel="noopener noreferrer"
@@ -182,7 +182,7 @@ const Sidebar = () => {
             <FaTwitter />
           </a>
           <a
-            href="https://discord.gg/qV8uyT6T"
+            href="https://discord.gg/eERs5fcA"
             className="text-gray-300 hover:text-blue-300 transition-colors duration-200 text-2xl"
             target="_blank"
             rel="noopener noreferrer"

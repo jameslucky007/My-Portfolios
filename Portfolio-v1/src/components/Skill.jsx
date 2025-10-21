@@ -46,9 +46,9 @@ const Skill = () => {
   return (
     <div className=" py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-      <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-blue-300 mb-10">
-            Skills
-          </h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-blue-300 mb-10">
+          Skills
+        </h2>
         {/* Skills Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
           {skills.map((skill, index) => {
