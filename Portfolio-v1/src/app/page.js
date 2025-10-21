@@ -56,11 +56,9 @@ export default function Home() {
   if (isLoading) {
     return (
       <div className="fixed inset-0 bg-gray-900 z-[9999] flex items-center justify-center">
-        {/* Infinity symbol (∞) as the loader */}
         <div className="text-8xl text-blue-400">
           <span className="loading-infinity-symbol">♾️</span>
         </div>
-        {/* Optional: Add a subtle loading text */}
         <p className="sr-only">Loading...</p>
       </div>
     );
