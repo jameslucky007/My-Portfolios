@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaGithub,
   FaLinkedin,
@@ -24,6 +24,48 @@ const Sidebar = () => {
     { id: "projects", label: "Projects" },
   ];
 
+  useEffect(() => {
+    const sections = links
+      .map((link) => document.getElementById(link.id))
+      .filter((el) => el !== null);
+
+    const checkActiveSection = () => {
+      const scrollY = window.scrollY;
+      const offset = 100;
+
+      let currentSectionId = active;
+
+      for (const section of sections) {
+        const top = section.offsetTop - offset;
+        const bottom = section.offsetTop + section.offsetHeight - offset;
+
+        if (scrollY >= top && scrollY < bottom) {
+          currentSectionId = section.id;
+          break;
+        }
+      }
+
+      if (currentSectionId !== active) {
+        setActive(currentSectionId);
+      }
+    };
+
+    window.addEventListener("scroll", checkActiveSection);
+
+    checkActiveSection();
+
+    return () => window.removeEventListener("scroll", checkActiveSection);
+  }, [active, links]);
+
+  const handleClick = (id) => {
+    setActive(id);
+
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <aside className="lg:max-w-md lg:p-10 lg:ml-12 lg:fixed lg:h-screen text-white lg:w-1/3 p-6 relative z-30 flex flex-col items-center lg:items-start text-center lg:text-left bar">
       <div className="lg:sticky lg:top-10 w-full flex flex-col items-center lg:items-start">
@@ -38,7 +80,10 @@ const Sidebar = () => {
         </Link>
 
         <a href="/">
-          <h1 className="text-3xl lg:text-5xl font-extrabold">Lakki Ali</h1>
+          <h1 className="text-3xl lg:text-5xl font-extrabold flex items-center">
+            Lakki Ali
+            <span className="infinity-logo ml-2">♾️</span>
+          </h1>
         </a>
 
         <h4 className="text-lg lg:text-l mt-2 text-blue-300">
@@ -55,7 +100,10 @@ const Sidebar = () => {
             <a
               key={link.id}
               href={`#${link.id}`}
-              onClick={() => setActive(link.id)}
+              onClick={(e) => {
+                e.preventDefault();
+                handleClick(link.id);
+              }}
               className={`nav-link ${active === link.id ? "active" : ""}`}
             >
               {link.label}
@@ -68,6 +116,7 @@ const Sidebar = () => {
             href="https://www.linkedin.com/in/lucky-developer/"
             className="text-gray-300 hover:text-blue-300 transition-colors duration-200 text-2xl"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <FaLinkedin />
           </a>
@@ -75,6 +124,7 @@ const Sidebar = () => {
             href="https://github.com/jameslucky007"
             className="text-gray-300 hover:text-blue-300 transition-colors duration-200 text-2xl"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <FaGithub />
           </a>
@@ -82,6 +132,7 @@ const Sidebar = () => {
             href="https://leetcode.com/u/lakki0072022/"
             className="text-gray-300 hover:text-blue-300 transition-colors duration-200 text-2xl"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <TbBrandLeetcode />
           </a>
@@ -89,6 +140,7 @@ const Sidebar = () => {
             href="https://www.behance.net/jameslucky"
             className="text-gray-300 hover:text-blue-300 transition-colors duration-200 text-2xl"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <FaBehance />
           </a>
@@ -96,6 +148,7 @@ const Sidebar = () => {
             href="https://linktr.ee/LakkiAli"
             className="text-gray-300 hover:text-blue-300 transition-colors duration-200 text-2xl"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <TbBrandLinktree />
           </a>
@@ -117,6 +170,8 @@ const Sidebar = () => {
           <a
             href="https://t.me/LuckyA008"
             className="text-gray-300 hover:text-blue-300 transition-colors duration-200 text-2xl"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaTelegramPlane />
           </a>
@@ -129,6 +184,8 @@ const Sidebar = () => {
           <a
             href="https://discord.gg/qV8uyT6T"
             className="text-gray-300 hover:text-blue-300 transition-colors duration-200 text-2xl"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaDiscord />
           </a>
