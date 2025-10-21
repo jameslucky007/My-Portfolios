@@ -61,12 +61,7 @@ const Hero = () => {
         }}
       />
 
-      {/* Sidebar on top (mobile) */}
-      <div className="block lg:hidden">
-        <div className="sticky top-0 z-20">
-          {/* Sidebar imported as a component if needed */}
-        </div>
-      </div>
+      
 
       {/* Main content */}
       <main className="relative z-10 flex-1 w-full lg:ml-[33.333%] px-5 py-10 lg:p-10 overflow-y-auto max-h-screen text-gray-300">
