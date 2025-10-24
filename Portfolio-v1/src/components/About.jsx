@@ -13,7 +13,7 @@ const About = () => {
           </h2>
 
           <a
-            href="https://docs.google.com/document/d/1eSluUwmdj2ONIEI9eCUridzldBN2smGJiVNQCvGeobI/edit?tab=t.0"
+            href="https://docs.google.com/document/d/1xkC-8yFh_dcZeqrqu1rhCK6JSpjVYuJ-/edit?usp=sharing&ouid=115918667191438709297&rtpof=true&sd=true"
             id="about"
             className="group inline-flex items-center gap-2 text-blue-300 hover:text-blue-400 transition-all duration-200 text-lg sm:text-xl font-semibold"
           >
