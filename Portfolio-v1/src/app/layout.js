@@ -18,8 +18,8 @@ const roboto = Roboto({
 //  Meta data of website
 
 export const metadata = {
-  title: "Lucky A",
-  description: "my portfolio",
+  title: "Portfolio-V1",
+  description: "My First Potfolio",
   icons: { icon: "/icon.ico" },
 };
 
