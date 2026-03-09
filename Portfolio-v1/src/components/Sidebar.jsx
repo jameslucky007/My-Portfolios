@@ -73,7 +73,7 @@ const Sidebar = () => {
         <Link href={"/"}>
           <Image
             className="rounded-full w-32 h-32 lg:w-40 lg:h-40 object-cover border-2 border-blue-300 mb-5 "
-            src="/photo.webp"
+            src="/Profile.webp"
             alt="Profile"
             width={150}
             height={150}
