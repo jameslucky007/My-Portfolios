@@ -44,7 +44,7 @@ const Skill = () => {
   ];
 
   return (
-    <div className=" py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <div className=" py-12 sm:py-16 lg:py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-blue-300 mb-10">
           Skills
